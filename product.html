@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmartCart - High-End Headphones</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#e7eeff",
+                        "on-tertiary-fixed": "#271901",
+                        "on-surface": "#111c2d",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "tertiary-container": "#271901",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "on-secondary-container": "#fefcff",
+                        "surface-container-highest": "#d8e3fb",
+                        "surface-container-high": "#dee8ff",
+                        "primary": "#000000",
+                        "tertiary": "#000000",
+                        "tertiary-fixed": "#fcdeb5",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-bright": "#f9f9ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#98805d",
+                        "background": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf1ff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#565e74",
+                        "secondary-container": "#316bf3",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "secondary-fixed": "#dbe1ff",
+                        "primary-fixed": "#dae2fd",
+                        "outline-variant": "#c6c6cd",
+                        "outline": "#76777d",
+                        "on-background": "#111c2d",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#7c839b",
+                        "surface-variant": "#d8e3fb",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary": "#0051d5",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-dim": "#cfdaf2",
+                        "on-error": "#ffffff",
+                        "primary-container": "#131b2e",
+                        "surface": "#f9f9ff",
+                        "on-secondary-fixed": "#00174b",
+                        "inverse-surface": "#263143",
+                        "ai-accent": "#06B6D4" // Teal for AI
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1rem",
+                        "margin-desktop": "2.5rem",
+                        "margin-mobile": "1rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "stack-lg": "2rem"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    },
+                    "boxShadow": {
+                        "layer1": "0px 4px 20px rgba(15, 23, 42, 0.05)",
+                        "layer2": "0px 12px 32px rgba(15, 23, 42, 0.12)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col pt-16">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm transition-opacity duration-200 opacity-100">
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-6 px-margin-desktop max-w-container-max mx-auto h-16">
+<!-- Left: Logo + Search -->
+<div class="flex items-center gap-6">
+<a class="text-headline-md font-headline-md font-black text-on-surface dark:text-on-primary-fixed whitespace-nowrap" href="index.html">SmartCart</a>
+<div class="hidden xl:flex relative w-56">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low border border-outline-variant rounded-lg text-body-sm font-body-sm focus:border-secondary-container focus:ring-2 focus:ring-secondary-container/50 outline-none transition-all" placeholder="Search products..." type="text"/>
+</div>
+</div>
+<!-- Center: Navigation Links -->
+<div class="hidden md:flex items-center gap-6 justify-center whitespace-nowrap">
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary font-label-bold text-label-bold pb-1 hover:text-secondary transition-colors duration-200" href="products.html">Electronics</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 pb-1" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 pb-1" href="seller.html">Seller Hub</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 pb-1" href="tracking.html">Order Tracking</a>
+</div>
+<!-- Right: Trailing Icons -->
+<div class="flex items-center gap-4 justify-end">
+<button class="text-on-surface-variant hover:text-secondary transition-colors duration-200 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button onclick="window.location='cart.html'" class="text-on-surface-variant hover:text-secondary transition-colors duration-200 relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-error text-on-error text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+</button>
+<div class="relative">
+<button aria-expanded="false" aria-haspopup="true" aria-label="Profile" id="profile-menu-btn" onclick="toggleProfileMenu(event)" class="text-on-surface-variant hover:text-secondary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-48 bg-surface-container-lowest border border-outline-variant/50 rounded-lg shadow-[0px_8px_24px_rgba(15,23,42,0.12)] py-1 z-50" id="profile-dropdown">
+<a class="flex items-center gap-2 px-4 py-2.5 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="login.html">
+<span class="material-symbols-outlined text-[18px]">login</span>Sign In
+</a>
+<a class="flex items-center gap-2 px-4 py-2.5 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="login.html?tab=signup">
+<span class="material-symbols-outlined text-[18px]">person_add</span>Sign Up
+</a>
+<div class="h-px bg-outline-variant/40 my-1"></div>
+<a class="flex items-center gap-2 px-4 py-2.5 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="profile.html">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>Profile
+</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full py-stack-lg">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-label-md font-label-md text-on-surface-variant mb-stack-lg">
+<ol class="inline-flex items-center space-x-2">
+<li class="inline-flex items-center">
+<a class="hover:text-primary transition-colors" href="index.html">Home</a>
+</li>
+<li><span class="material-symbols-outlined text-sm">chevron_right</span></li>
+<li><a class="hover:text-primary transition-colors" href="products.html">Electronics</a></li>
+<li><span class="material-symbols-outlined text-sm">chevron_right</span></li>
+<li><a class="hover:text-primary transition-colors" href="products.html" id="breadcrumb-category">Audio</a></li>
+<li><span class="material-symbols-outlined text-sm">chevron_right</span></li>
+<li aria-current="page" class="text-primary font-semibold" id="breadcrumb-current">Aura Pro Wireless ANC</li>
+</ol>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-stack-lg">
+<!-- Gallery (Left) -->
+<div class="flex flex-col gap-stack-md">
+<div class="aspect-square bg-surface-container-low rounded-xl overflow-hidden relative shadow-layer1 border border-outline-variant/30">
+<img class="w-full h-full object-cover" id="main-image" data-alt="A highly detailed close-up of premium over-ear wireless headphones resting on a minimalist white marble pedestal. The headphones feature sleek matte black aluminum and plush memory foam earcups. The lighting is soft and cinematic, creating subtle highlights on the metallic surfaces against a clean, light-mode background. Modern, high-end corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvPOpmszqDsWU1-_HQ_-V7Wxq5g2B0uVxzf5MoBI9Fddrg-qAx4JDUNrwKs7RlpjDvj-AF43nA-axbU9dzc6AnYLcoGXxEYkYdtNtpXte101cl2NLDR3r1KWtI7K6a8leOVI6nsnbKdRYmn0G0EhHKdrO9Ji6fgNspAo58fCwjq3nNyFY9Xyja05Xs5Jny_sYt_UFjYycZtXGS6hwim5a2Rg__9oq9wJME7uhoozzoBcV7C0EGHA6g0A"/>
+</div>
+<!-- Thumbnails -->
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden border-2 border-primary cursor-pointer">
+<img class="w-full h-full object-cover" id="thumb-image-1" data-alt="Product thumbnail view 1" src=""/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 opacity-70 hover:opacity-100 cursor-pointer transition-opacity">
+<img class="w-full h-full object-cover" id="thumb-image-2" data-alt="Product thumbnail view 2" src=""/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 opacity-70 hover:opacity-100 cursor-pointer transition-opacity">
+<img class="w-full h-full object-cover" id="thumb-image-3" data-alt="Product thumbnail view 3" src=""/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 opacity-70 hover:opacity-100 cursor-pointer transition-opacity flex items-center justify-center bg-surface-container-highest">
+<span class="material-symbols-outlined text-outline">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Details (Right) -->
+<div class="flex flex-col pt-4 lg:pt-0">
+<div class="mb-4">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2" id="product-title">Aura Pro Wireless ANC</h1>
+<div class="flex items-center gap-3 mb-6">
+<div class="flex items-center text-[#F59E0B]" id="rating-stars"> <!-- Hardcoded for star color, standard UI pattern -->
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant underline cursor-pointer hover:text-primary" id="review-count">4.8 (1.2k reviews)</span>
+</div>
+<div class="flex items-end gap-4 mb-8" id="price-block">
+<span class="font-headline-md text-headline-md font-bold text-on-surface" id="price-current">$249.99</span>
+<span class="font-body-lg text-body-lg text-outline line-through mb-1" id="price-original">$312.49</span>
+<span class="px-2 py-1 bg-error-container text-on-error-container font-label-bold text-label-bold rounded-md mb-1" id="discount-badge">20% OFF</span>
+</div>
+</div>
+<div class="w-full h-px bg-outline-variant/30 mb-8"></div>
+<!-- Selectors -->
+<div class="mb-8 space-y-6">
+<!-- Color -->
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-3">Color: <span class="font-normal text-on-surface-variant" id="color-label">Midnight Black</span></h3>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-full bg-[#111111] border-2 border-primary ring-2 ring-transparent ring-offset-2 focus:outline-none"></button>
+<button class="w-10 h-10 rounded-full bg-[#E5E7EB] border border-outline-variant/50 hover:border-outline focus:outline-none"></button>
+</div>
+</div>
+<!-- Quantity -->
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-3">Quantity</h3>
+<div class="flex items-center w-32 border border-outline-variant rounded-lg overflow-hidden h-12 bg-surface">
+<button class="w-10 h-full flex items-center justify-center hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">remove</span></button>
+<div class="flex-1 text-center font-body-md text-body-md font-medium text-on-surface">1</div>
+<button class="w-10 h-full flex items-center justify-center hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">add</span></button>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 mb-8">
+<button class="flex-1 bg-primary text-on-primary h-12 rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg">shopping_cart</span> Add to Cart
+                    </button>
+<button onclick="window.location='cart.html'" class="flex-1 bg-surface border border-outline-variant text-primary h-12 rounded-lg font-label-bold text-label-bold flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors">
+                        Buy Now
+                    </button>
+<button class="w-12 h-12 flex-shrink-0 bg-surface border border-outline-variant text-on-surface-variant rounded-lg flex items-center justify-center hover:text-error hover:border-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Trust Badges -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col gap-3 border border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Fast Delivery</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Order within 2 hrs for next day delivery.</p>
+</div>
+</div>
+<div class="w-full h-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">security</span>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Secure Payment</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">End-to-end encrypted transactions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Description & Specs -->
+<div class="mb-stack-lg border-t border-outline-variant/30 pt-stack-lg">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-6">Product Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 space-y-4 font-body-md text-body-md text-on-surface-variant" id="product-description">
+<p>Experience audio in its purest form with the Aura Pro Wireless ANC headphones. Engineered with custom 50mm beryllium drivers, these headphones deliver a breathtakingly wide soundstage with crystalline highs and deep, resonant bass.</p>
+<p>The industry-leading adaptive noise cancellation continuously monitors your environment, adjusting in real-time to silence distractions whether you're in a bustling office or a loud airplane cabin. When you need to tune back into the world, Transparency Mode lets ambient sound through naturally.</p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 shadow-layer1">
+<h3 class="font-label-bold text-label-bold text-on-surface mb-4">Tech Specs</h3>
+<ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant" id="specs-list">
+<li class="flex justify-between border-b border-outline-variant/20 pb-2"><span class="font-medium">Drivers</span> <span>50mm Beryllium</span></li>
+<li class="flex justify-between border-b border-outline-variant/20 pb-2"><span class="font-medium">Battery Life</span> <span>Up to 40 hours</span></li>
+<li class="flex justify-between border-b border-outline-variant/20 pb-2"><span class="font-medium">Bluetooth</span> <span>Version 5.3</span></li>
+<li class="flex justify-between border-b border-outline-variant/20 pb-2"><span class="font-medium">Weight</span> <span>285 grams</span></li>
+<li class="flex justify-between"><span class="font-medium">Charging</span> <span>USB-C Fast Charge</span></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- AI Recommendations -->
+<div class="mb-stack-lg pt-stack-lg border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-ai-accent" style="font-variation-settings: 'FILL' 1;">auto_awesome</span> 
+                    You may also like
+                </h2>
+<a class="font-label-bold text-label-bold text-secondary hover:underline" href="products.html">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter" id="related-products">
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-high w-full mt-stack-lg border-t border-outline-variant py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-headline-sm font-headline-sm font-bold text-primary">SmartCart AI</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 SmartCart AI. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Extra column for balance if needed, or leave empty/socials -->
+<span class="font-label-bold text-label-bold text-on-surface">Follow Us</span>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">share</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">mail</span>
+</div>
+</div>
+</div>
+</footer>
+<script src="products-data.js"></script>
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const requestedId = params.get('id');
+    const product = getProductById(requestedId) || PRODUCTS[0];
+
+    // Title & breadcrumb
+    document.title = 'SmartCart - ' + product.shortName;
+    document.getElementById('breadcrumb-category').textContent = product.category;
+    document.getElementById('breadcrumb-current').textContent = product.shortName;
+
+    // Image
+    const mainImage = document.getElementById('main-image');
+    const thumbIds = ['thumb-image-1', 'thumb-image-2', 'thumb-image-3'];
+    if (product.image) {
+      mainImage.src = product.image;
+      mainImage.alt = product.name;
+      thumbIds.forEach(function (id) {
+        const thumb = document.getElementById(id);
+        if (thumb) {
+          thumb.src = product.image;
+          thumb.alt = product.name;
+        }
+      });
+    } else {
+      // No photo available for this product — show a neutral placeholder.
+      mainImage.src = '';
+      mainImage.alt = product.name;
+      mainImage.style.display = 'none';
+      const placeholder = document.createElement('div');
+      placeholder.className = 'w-full h-full flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-low';
+      placeholder.innerHTML = '<span class="material-symbols-outlined text-[64px] text-outline-variant">image</span>';
+      mainImage.parentElement.appendChild(placeholder);
+      thumbIds.forEach(function (id) {
+        const thumb = document.getElementById(id);
+        if (thumb) {
+          thumb.style.display = 'none';
+          const tilePlaceholder = document.createElement('div');
+          tilePlaceholder.className = 'w-full h-full flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-low';
+          tilePlaceholder.innerHTML = '<span class="material-symbols-outlined text-outline-variant">image</span>';
+          thumb.parentElement.appendChild(tilePlaceholder);
+        }
+      });
+    }
+
+    // Title
+    document.getElementById('product-title').textContent = product.name;
+
+    // Rating stars
+    const starsContainer = document.getElementById('rating-stars');
+    starsContainer.innerHTML = '';
+    const fullStars = Math.floor(product.rating);
+    const hasHalfStar = product.rating - fullStars >= 0.5;
+    for (let i = 0; i < fullStars; i++) {
+      starsContainer.innerHTML += '<span class="material-symbols-outlined text-lg" style="font-variation-settings: \'FILL\' 1;">star</span>';
+    }
+    if (hasHalfStar) {
+      starsContainer.innerHTML += '<span class="material-symbols-outlined text-lg" style="font-variation-settings: \'FILL\' 0.5;">star_half</span>';
+    }
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    for (let i = 0; i < emptyStars; i++) {
+      starsContainer.innerHTML += '<span class="material-symbols-outlined text-lg text-outline-variant">star</span>';
+    }
+    document.getElementById('review-count').textContent = product.rating.toFixed(1) + ' (' + product.reviews + ' reviews)';
+
+    // Price
+    document.getElementById('price-current').textContent = '$' + product.price.toFixed(2);
+    const originalPriceEl = document.getElementById('price-original');
+    const discountBadgeEl = document.getElementById('discount-badge');
+    if (product.originalPrice) {
+      originalPriceEl.textContent = '$' + product.originalPrice.toFixed(2);
+      originalPriceEl.style.display = '';
+    } else {
+      originalPriceEl.style.display = 'none';
+    }
+    if (product.discount) {
+      discountBadgeEl.textContent = product.discount;
+      discountBadgeEl.style.display = '';
+    } else {
+      discountBadgeEl.style.display = 'none';
+    }
+
+    // Description
+    const descEl = document.getElementById('product-description');
+    descEl.innerHTML = product.description.map(p => '<p>' + p + '</p>').join('');
+
+    // Specs
+    const specsEl = document.getElementById('specs-list');
+    specsEl.innerHTML = product.specs.map(([label, value], idx) => {
+      const borderClass = idx === product.specs.length - 1 ? '' : 'border-b border-outline-variant/20 pb-2';
+      return '<li class="flex justify-between ' + borderClass + '"><span class="font-medium">' + label + '</span> <span>' + value + '</span></li>';
+    }).join('');
+
+    // Related products (everything except the current one, up to 4)
+    const related = PRODUCTS.filter(p => p.id !== product.id).slice(0, 4);
+    const relatedEl = document.getElementById('related-products');
+    relatedEl.innerHTML = related.map(p => {
+      const imageBlock = p.image
+        ? '<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="' + p.image + '" alt="' + p.name + '"/>'
+        : '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-low"><span class="material-symbols-outlined text-[40px] text-outline-variant">image</span></div>';
+      const badgeBlock = p.badge
+        ? '<div class="absolute top-2 left-2 z-10 bg-ai-accent/10 backdrop-blur-md px-2 py-1 rounded-md border border-ai-accent/20 flex items-center gap-1"><span class="material-symbols-outlined text-[12px] text-ai-accent" style="font-variation-settings: \'FILL\' 1;">auto_awesome</span><span class="text-[10px] font-bold text-ai-accent uppercase tracking-wider">' + p.badge + '</span></div>'
+        : '';
+      return '<div class="bg-surface-container-lowest rounded-2xl shadow-layer1 border border-outline-variant/20 overflow-hidden group cursor-pointer hover:shadow-layer2 transition-shadow" onclick="window.location=\'product.html?id=' + p.id + '\'">' +
+        '<div class="aspect-[4/3] bg-surface-container-low relative overflow-hidden">' + badgeBlock + imageBlock + '</div>' +
+        '<div class="p-3 md:p-4">' +
+          '<h4 class="font-label-bold text-label-bold text-on-surface mb-1 truncate">' + p.shortName + '</h4>' +
+          '<div class="flex items-center justify-between mt-2">' +
+            '<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$' + p.price.toFixed(2) + '</span>' +
+            '<div class="flex items-center text-outline"><span class="material-symbols-outlined text-sm">star</span><span class="text-xs ml-1">' + p.rating.toFixed(1) + '</span></div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  })();
+
+  function toggleProfileMenu(event) {
+      event.stopPropagation();
+      document.getElementById('profile-dropdown').classList.toggle('hidden');
+  }
+  document.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('profile-dropdown');
+      const btn = document.getElementById('profile-menu-btn');
+      if (dropdown && !dropdown.classList.contains('hidden') && !dropdown.contains(e.target) && !btn.contains(e.target)) {
+          dropdown.classList.add('hidden');
+      }
+  });
+</script>
+</body></html>

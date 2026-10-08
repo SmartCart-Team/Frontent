@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmartCart - Log In or Sign Up</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#e7eeff",
+                      "on-tertiary-fixed": "#271901",
+                      "on-surface": "#111c2d",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#45464d",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "tertiary-container": "#271901",
+                      "on-tertiary-fixed-variant": "#574425",
+                      "on-secondary-container": "#fefcff",
+                      "surface-container-highest": "#d8e3fb",
+                      "surface-container-high": "#dee8ff",
+                      "primary": "#000000",
+                      "tertiary": "#000000",
+                      "tertiary-fixed": "#fcdeb5",
+                      "surface-container-low": "#f0f3ff",
+                      "surface-bright": "#f9f9ff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-container": "#98805d",
+                      "background": "#f9f9ff",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ecf1ff",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#565e74",
+                      "secondary-container": "#316bf3",
+                      "tertiary-fixed-dim": "#dec29a",
+                      "secondary-fixed": "#dbe1ff",
+                      "primary-fixed": "#dae2fd",
+                      "outline-variant": "#c6c6cd",
+                      "outline": "#76777d",
+                      "on-background": "#111c2d",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#bec6e0",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "on-primary-container": "#7c839b",
+                      "surface-variant": "#d8e3fb",
+                      "on-primary-fixed": "#131b2e",
+                      "secondary": "#0051d5",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "primary-fixed-dim": "#bec6e0",
+                      "surface-dim": "#cfdaf2",
+                      "on-error": "#ffffff",
+                      "primary-container": "#131b2e",
+                      "surface": "#f9f9ff",
+                      "on-secondary-fixed": "#00174b",
+                      "inverse-surface": "#263143"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "0.5rem",
+                      "stack-md": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "margin-mobile": "1rem",
+                      "container-max": "1280px",
+                      "gutter": "1.5rem",
+                      "stack-lg": "2rem"
+              },
+              "fontFamily": {
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- Minimal TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md w-full z-50 border-b border-outline-variant/30 shadow-sm">
+<div class="flex items-center justify-center px-margin-desktop max-w-container-max mx-auto h-16 w-full">
+<a class="text-headline-md font-headline-md font-black text-on-surface dark:text-on-primary-fixed tracking-tight hover:opacity-80 transition-opacity" href="index.html">SmartCart</a>
+</div>
+</nav>
+
+<main class="w-full min-h-[calc(100vh-4rem)] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-stack-lg bg-surface-container-low">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-2xl shadow-[0px_12px_32px_rgba(15,23,42,0.10)] border border-outline-variant/30 overflow-hidden">
+
+    <!-- Tabs -->
+    <div class="grid grid-cols-2 border-b border-outline-variant/30">
+        <button id="tab-login-btn" onclick="switchTab('login')" class="py-4 font-label-bold text-label-bold uppercase tracking-widest text-on-surface border-b-2 border-secondary transition-colors">
+            Log In
+        </button>
+        <button id="tab-signup-btn" onclick="switchTab('signup')" class="py-4 font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-transparent hover:text-on-surface transition-colors">
+            Sign Up
+        </button>
+    </div>
+
+    <div class="p-6 md:p-8">
+
+        <!-- LOGIN PANEL -->
+        <div id="panel-login">
+            <h1 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Welcome back</h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Log in to track orders and manage your account.</p>
+
+            <form onsubmit="event.preventDefault(); window.location='profile.html';" class="space-y-4">
+                <div>
+                    <label class="block font-label-bold text-label-bold text-on-surface-variant mb-1.5" for="login-email">Email</label>
+                    <input class="w-full h-11 px-4 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" id="login-email" placeholder="you@example.com" required="" type="email"/>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mb-1.5">
+                        <label class="block font-label-bold text-label-bold text-on-surface-variant" for="login-password">Password</label>
+                        <a class="font-body-sm text-[13px] text-secondary hover:underline" href="#">Forgot password?</a>
+                    </div>
+                    <input class="w-full h-11 px-4 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" id="login-password" placeholder="Enter your password" required="" type="password"/>
+                </div>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input class="w-4 h-4 rounded border-outline-variant text-secondary focus:ring-secondary" type="checkbox"/>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">Keep me signed in</span>
+                </label>
+                <button class="w-full h-11 bg-[#0F172A] hover:bg-[#1e293b] text-white font-label-bold text-label-bold rounded-lg transition-colors mt-2" type="submit">
+                    Log In
+                </button>
+            </form>
+
+            <div class="flex items-center gap-3 my-6">
+                <div class="h-px flex-1 bg-outline-variant/50"></div>
+                <span class="font-label-md text-label-md text-on-surface-variant">OR</span>
+                <div class="h-px flex-1 bg-outline-variant/50"></div>
+            </div>
+
+            <button class="w-full h-11 border border-outline-variant rounded-lg flex items-center justify-center gap-2 font-label-bold text-label-bold text-on-surface hover:bg-surface-container-low transition-colors">
+                <span class="material-symbols-outlined text-[18px]">mail</span>
+                Continue with Google
+            </button>
+
+            <p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-6">
+                Selling on SmartCart? <a class="text-secondary hover:underline font-medium" href="seller.html">Go to Seller Hub</a>
+            </p>
+        </div>
+
+        <!-- SIGN UP PANEL -->
+        <div class="hidden" id="panel-signup">
+            <h1 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Create your account</h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Join SmartCart to start shopping smarter.</p>
+
+            <form onsubmit="event.preventDefault(); window.location='profile.html';" class="space-y-4">
+                <div>
+                    <label class="block font-label-bold text-label-bold text-on-surface-variant mb-1.5" for="signup-name">Full name</label>
+                    <input class="w-full h-11 px-4 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" id="signup-name" placeholder="Jane Doe" required="" type="text"/>
+                </div>
+                <div>
+                    <label class="block font-label-bold text-label-bold text-on-surface-variant mb-1.5" for="signup-email">Email</label>
+                    <input class="w-full h-11 px-4 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" id="signup-email" placeholder="you@example.com" required="" type="email"/>
+                </div>
+                <div>
+                    <label class="block font-label-bold text-label-bold text-on-surface-variant mb-1.5" for="signup-password">Password</label>
+                    <input class="w-full h-11 px-4 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" id="signup-password" minlength="8" placeholder="At least 8 characters" required="" type="password"/>
+                </div>
+                <label class="flex items-start gap-2 cursor-pointer">
+                    <input class="w-4 h-4 mt-0.5 rounded border-outline-variant text-secondary focus:ring-secondary" required="" type="checkbox"/>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">I agree to the <a class="text-secondary hover:underline" href="#">Terms of Service</a> and <a class="text-secondary hover:underline" href="#">Privacy Policy</a></span>
+                </label>
+                <button class="w-full h-11 bg-[#0F172A] hover:bg-[#1e293b] text-white font-label-bold text-label-bold rounded-lg transition-colors mt-2" type="submit">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="flex items-center gap-3 my-6">
+                <div class="h-px flex-1 bg-outline-variant/50"></div>
+                <span class="font-label-md text-label-md text-on-surface-variant">OR</span>
+                <div class="h-px flex-1 bg-outline-variant/50"></div>
+            </div>
+
+            <button class="w-full h-11 border border-outline-variant rounded-lg flex items-center justify-center gap-2 font-label-bold text-label-bold text-on-surface hover:bg-surface-container-low transition-colors">
+                <span class="material-symbols-outlined text-[18px]">mail</span>
+                Continue with Google
+            </button>
+        </div>
+
+    </div>
+</div>
+</main>
+
+<script>
+    function switchTab(tab) {
+        const loginBtn = document.getElementById('tab-login-btn');
+        const signupBtn = document.getElementById('tab-signup-btn');
+        const loginPanel = document.getElementById('panel-login');
+        const signupPanel = document.getElementById('panel-signup');
+
+        const activeClasses = ['text-on-surface', 'border-secondary'];
+        const inactiveClasses = ['text-on-surface-variant', 'border-transparent'];
+
+        if (tab === 'login') {
+            loginPanel.classList.remove('hidden');
+            signupPanel.classList.add('hidden');
+            loginBtn.classList.add(...activeClasses);
+            loginBtn.classList.remove(...inactiveClasses);
+            signupBtn.classList.add(...inactiveClasses);
+            signupBtn.classList.remove(...activeClasses);
+        } else {
+            signupPanel.classList.remove('hidden');
+            loginPanel.classList.add('hidden');
+            signupBtn.classList.add(...activeClasses);
+            signupBtn.classList.remove(...inactiveClasses);
+            loginBtn.classList.add(...inactiveClasses);
+            loginBtn.classList.remove(...activeClasses);
+        }
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('tab') === 'signup') {
+        switchTab('signup');
+    }
+</script>
+</body></html>

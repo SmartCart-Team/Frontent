@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SmartCart - Shop Smarter</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#e7eeff",
+                      "on-tertiary-fixed": "#271901",
+                      "on-surface": "#111c2d",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#45464d",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "tertiary-container": "#271901",
+                      "on-tertiary-fixed-variant": "#574425",
+                      "on-secondary-container": "#fefcff",
+                      "surface-container-highest": "#d8e3fb",
+                      "surface-container-high": "#dee8ff",
+                      "primary": "#000000",
+                      "tertiary": "#000000",
+                      "tertiary-fixed": "#fcdeb5",
+                      "surface-container-low": "#f0f3ff",
+                      "surface-bright": "#f9f9ff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-container": "#98805d",
+                      "background": "#f9f9ff",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ecf1ff",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#565e74",
+                      "secondary-container": "#316bf3",
+                      "tertiary-fixed-dim": "#dec29a",
+                      "secondary-fixed": "#dbe1ff",
+                      "primary-fixed": "#dae2fd",
+                      "outline-variant": "#c6c6cd",
+                      "outline": "#76777d",
+                      "on-background": "#111c2d",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#bec6e0",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "on-primary-container": "#7c839b",
+                      "surface-variant": "#d8e3fb",
+                      "on-primary-fixed": "#131b2e",
+                      "secondary": "#0051d5",
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "primary-fixed-dim": "#bec6e0",
+                      "surface-dim": "#cfdaf2",
+                      "on-error": "#ffffff",
+                      "primary-container": "#131b2e",
+                      "surface": "#f9f9ff",
+                      "on-secondary-fixed": "#00174b",
+                      "inverse-surface": "#263143"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "0.5rem",
+                      "stack-md": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "margin-mobile": "1rem",
+                      "container-max": "1280px",
+                      "gutter": "1.5rem",
+                      "stack-lg": "2rem"
+              },
+              "fontFamily": {
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-16">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-sm transition-colors duration-200">
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-6 px-margin-desktop max-w-container-max mx-auto h-16 w-full">
+<!-- Search & Logo Area -->
+<div class="flex items-center gap-6">
+<a class="text-headline-md font-headline-md font-black text-on-surface dark:text-on-primary-fixed tracking-tight hover:opacity-80 transition-opacity whitespace-nowrap" href="index.html">SmartCart</a>
+<div class="hidden xl:flex items-center relative w-56">
+<span class="material-symbols-outlined absolute left-3 text-outline" data-icon="search">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all" placeholder="Search products..." type="text"/>
+</div>
+</div>
+<!-- Navigation Links -->
+<ul class="hidden lg:flex items-center gap-6 justify-center whitespace-nowrap">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 uppercase tracking-wide" href="products.html">Electronics</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 uppercase tracking-wide" href="index.html">Home</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 uppercase tracking-wide" href="seller.html">Seller Hub</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant font-label-bold text-label-bold hover:text-secondary transition-colors duration-200 uppercase tracking-wide" href="tracking.html">Order Tracking</a></li>
+</ul>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 justify-end">
+<button class="text-on-surface-variant hover:text-secondary transition-colors duration-200 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button onclick="window.location='cart.html'" class="text-on-surface-variant hover:text-secondary transition-colors duration-200 relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-error text-on-error text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">3</span>
+</button>
+<div class="relative">
+<button aria-expanded="false" aria-haspopup="true" aria-label="Profile" id="profile-menu-btn" onclick="toggleProfileMenu(event)" class="text-on-surface-variant hover:text-secondary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-48 bg-surface-container-lowest border border-outline-variant/50 rounded-lg shadow-[0px_8px_24px_rgba(15,23,42,0.12)] py-1 z-50" id="profile-dropdown">
+<a class="flex items-center gap-2 px-4 py-2.5 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="login.html">
+<span class="material-symbols-outlined text-[18px]">login</span>Sign In
+</a>
+<a class="flex items-center gap-2 px-4 py-2.5 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="login.html?tab=signup">
+<span class="material-symbols-outlined text-[18px]">person_add</span>Sign Up
+</a>
+<div class="h-px bg-outline-variant/40 my-1"></div>
+<a class="flex items-center gap-2 px-4 py-2.5 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="profile.html">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>Profile
+</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex items-center bg-surface-container-low overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="object-cover w-full h-full opacity-60" data-alt="A modern, high-end e-commerce hero background showing abstract, sleek packaging and tech gadgets arranged symmetrically. The scene uses a sophisticated palette of deep blacks, pristine whites, and subtle cyan accents to convey AI-powered shopping. High-key lighting highlights the polished surfaces, creating a professional and technologically advanced mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJMJAWLHwWic_mXuQk--7eGIptlbLGyO9CnM-CNI3ukUnYh_JclIkpF_PdQSWw1dmUzQJpeCKs9OPw8JFt31apHQMeL5dJB4gXBtGbBRyCGvhRyUdFMduafgkDywtlQQ6CKlQlq-CyZY3wQlmEy_Wj0DUPJtKFv8B_aGp7xTBr8RCepGEavjfM7lmgdF8MxqkWNTeFWA1po4De5yMUXVEZvP5wLQEgRxAaOixjpPMhW0Wny_ZOsNIcBA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex flex-col items-start justify-center space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-[#06B6D4]/10 rounded-full border border-[#06B6D4]/20">
+<span class="material-symbols-outlined text-[#06B6D4] text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-md text-label-md text-[#06B6D4] uppercase tracking-wider">AI-Powered Shopping</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-bold leading-tight">
+                        Shop Smarter<br/>with SmartCart
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Experience the future of retail. Our AI learns your preferences to curate personalized product recommendations, ensuring you find exactly what you need, faster.
+                    </p>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<button onclick="window.location='products.html'" class="px-6 py-3 bg-[#0F172A] text-white rounded-lg font-label-bold text-label-bold hover:bg-[#1e293b] transition-colors shadow-md">
+                            Start Shopping
+                        </button>
+<button onclick="window.location='products.html'" class="px-6 py-3 bg-white text-[#0F172A] border border-[#E2E8F0] rounded-lg font-label-bold text-label-bold hover:bg-surface-container transition-colors">
+                            Explore Products
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md font-bold">Shop by Category</h2>
+<a class="group relative block w-full max-w-xl aspect-[2/1] md:aspect-[3/1] rounded-xl overflow-hidden bg-surface-container-highest" href="products.html">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" data-alt="A clean, minimalist flat lay of modern consumer electronics, including a sleek smartphone, wireless earbuds, and a smartwatch on a pristine white surface. Soft, diffused lighting creates a premium, high-tech aesthetic typical of high-end tech advertising. Subtle teal accents highlight the devices' screens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4NYC0-35EiX6mOUjt_3BRxY8SByyKn8ZPWr_kAOn8tTwwvXaFwV0AoqRmqgo7M42wNa7xoX0woqt0L_ed31ihOJhpExIULanw0psW9K5XbsEjBklTYzsl85qXtQt7ILt17z0J3oe7TeBGvzFkN_xcIQP4tXz51tvA08qVeL4Cy2XOh9SAwMCiA-Cm2bD1bhmpw4IJqiNuQzb5qZbGiDfBk1OhdoZZYs51ipKcDcmEO6JroPvIcTXlfQ"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<h3 class="font-headline-sm text-headline-sm font-bold">Electronics</h3>
+</div>
+</a>
+</section>
+<!-- Recommended For You (AI Section) -->
+<section class="py-stack-lg bg-surface-container-low border-y border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="material-symbols-outlined text-[#06B6D4]" data-icon="auto_awesome">auto_awesome</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Recommended For You</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-[16px] shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-[#E2E8F0] overflow-hidden group hover:shadow-[0px_12px_32px_rgba(15,23,42,0.12)] transition-shadow">
+<div class="relative aspect-[4/3] bg-surface-container">
+<img class="object-cover w-full h-full" data-alt="A high-end noise-canceling over-ear headphone shown in a sleek, minimalist studio setting. The headphones are matte black with metallic accents, resting on a clean white plinth. Crisp lighting highlights the premium materials and modern design, reflecting high-quality audio technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe_eS4Eur5QhZmDewPo-8utFXl_5wRSmhWW0F2iC5QSXxnibQX6PvFqKULJrRHXc7K9d1Svax6OIN2EwD5olFLpH_chkq-7533NsEuK4FDM5DM29cPHfZDz-y7Iwqfup-aYqaZhP1OHcbq_wlWp9bdRenG9LTEXdkg5oEDPjKXEhKTRF6YoZ7JiG10IF9Jdxa_LBXla9L68araao39yh4uZOb6hFViz8JPSdpoAnHx_NFfrVA0DItGqw"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-2 py-1 bg-[#06B6D4]/10 backdrop-blur-sm rounded-md border border-[#06B6D4]/20">
+<span class="material-symbols-outlined text-[#06B6D4] text-[12px]" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[#06B6D4] font-label-md text-[10px] font-bold uppercase">AI Recommended</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 bg-white rounded-full shadow-sm text-on-surface-variant hover:text-[#0F172A] transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">Sony WH-1000XM5</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-body-md text-body-md font-bold text-on-surface">$348.00</span>
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-1 text-on-surface-variant">4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-[16px] shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-[#E2E8F0] overflow-hidden group hover:shadow-[0px_12px_32px_rgba(15,23,42,0.12)] transition-shadow">
+<div class="relative aspect-[4/3] bg-surface-container">
+<img class="object-cover w-full h-full" data-alt="A sophisticated smart watch with a leather band displayed on a subtle geometric pedestal. The lighting is sharp, creating deep shadows that emphasize the sleek metal casing and vibrant digital display. The overall aesthetic is premium, technological, and refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_2J_EKNL_cH7KBEtW0qQBo5pN3kulnzXEimGTrhfUkb9G7TZy2bIyhtyRfbiIPzpXc27kurEmb1I1qa6ipA0DokefcDb0WkMgbv78otsfM8n6lXOABkIbr-4EhXiS7wsYvJhXkEv3eNmxKEVAniuJOKdzJuqQfGJ-Tazufvl0GMGjWjQh9P7iSy_aNjP25kYoy9YpXIsFKnzQIVDH5bvH5hNjMz8bB4sexOByFZ_dHHxS3ssmjWUHnw"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-2 py-1 bg-[#06B6D4]/10 backdrop-blur-sm rounded-md border border-[#06B6D4]/20">
+<span class="material-symbols-outlined text-[#06B6D4] text-[12px]" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[#06B6D4] font-label-md text-[10px] font-bold uppercase">AI Recommended</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 bg-white rounded-full shadow-sm text-on-surface-variant hover:text-[#0F172A] transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">Garmin Venu 3</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-body-md text-body-md font-bold text-on-surface">$449.99</span>
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-1 text-on-surface-variant">4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-[16px] shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-[#E2E8F0] overflow-hidden group hover:shadow-[0px_12px_32px_rgba(15,23,42,0.12)] transition-shadow">
+<div class="relative aspect-[4/3] bg-surface-container">
+<img class="object-cover w-full h-full" data-alt="A minimalist, modern ceramic coffee maker sitting on a clean granite countertop in a bright kitchen. Soft morning light streams across the device, highlighting its matte finish and precise lines. The scene conveys a sense of calm, premium home lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn-LyMGdAiZ5JuNSs7ztqf2S17txN3sIZhmyvmhk6v_yRnGIcUe-eLLLYj3eKZV3c9gsb3fU3YjNLHRF44f4L3_ZyV6giwlj3IfFKee2_w69RrGkvEAX9PCIRoUSiqqMNOdA7858xJzMBvmGttYYO2f9Pj0Zi6bbGFnzR133N1aJCxTPqyowwjLdMnD9weSJOiZlDp4005AqC4TJYPbJDp27dfWaAwK3pDItUvrbRCZD9i8l8IJXAlTg"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-2 py-1 bg-[#06B6D4]/10 backdrop-blur-sm rounded-md border border-[#06B6D4]/20">
+<span class="material-symbols-outlined text-[#06B6D4] text-[12px]" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[#06B6D4] font-label-md text-[10px] font-bold uppercase">AI Recommended</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 bg-white rounded-full shadow-sm text-on-surface-variant hover:text-[#0F172A] transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">Fellow Ode Grinder</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-body-md text-body-md font-bold text-on-surface">$345.00</span>
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-1 text-on-surface-variant">4.7</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white rounded-[16px] shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-[#E2E8F0] overflow-hidden group hover:shadow-[0px_12px_32px_rgba(15,23,42,0.12)] transition-shadow">
+<div class="relative aspect-[4/3] bg-surface-container">
+<img class="object-cover w-full h-full" data-alt="A sleek, lightweight ultrabook laptop partially open on a pristine white desk workspace. The screen displays a subtle abstract graphic. The environment is impeccably clean, illuminated by cool, bright studio lighting, emphasizing the laptop's thin profile and aluminum build." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAFq_JSBMX95pMgA5brsskXhlKAgwrXuJu01U3ffB7UCKHkCXYEnn8gQDyfoiDH_k5n0OGcjfjH3J_gb3ktiI9z98K2e05dXKZIVMSsRwI5vlZTfCmiQ_eX0Dv2Wa9rv0yN9nVG07Ifetng1pCjrDO-18vzpRkOOklT6Ezqpo86HbRopAVdoUjFZm9BBLEE3_-OStUV-lqRvjVYURRaLuKb3a5Ow1v4oWQSPOv_n7wqu1TSRw5FV4cUQ"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 px-2 py-1 bg-[#06B6D4]/10 backdrop-blur-sm rounded-md border border-[#06B6D4]/20">
+<span class="material-symbols-outlined text-[#06B6D4] text-[12px]" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[#06B6D4] font-label-md text-[10px] font-bold uppercase">AI Recommended</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 bg-white rounded-full shadow-sm text-on-surface-variant hover:text-[#0F172A] transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-label-bold text-label-bold text-on-surface truncate">ZenBook Pro 14</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-body-md text-body-md font-bold text-on-surface">$1,299.00</span>
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-1 text-on-surface-variant">4.9</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-high w-full mt-stack-lg border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="flex flex-col space-y-4">
+<span class="text-headline-sm font-headline-sm font-bold text-primary tracking-tight">SmartCart</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shop smarter, faster, and better with AI-powered personalized retail experiences.</p>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-label-bold text-label-bold text-on-surface mb-2">Legal</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-label-bold text-label-bold text-on-surface mb-2">Support</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-label-bold text-label-bold text-on-surface mb-2">Connect</h4>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop pb-stack-lg max-w-container-max mx-auto text-center border-t border-outline-variant/30 pt-4 mt-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 SmartCart AI. All rights reserved.</p>
+</div>
+</footer>
+</main>
+<script>
+    function toggleProfileMenu(event) {
+        event.stopPropagation();
+        document.getElementById('profile-dropdown').classList.toggle('hidden');
+    }
+    document.addEventListener('click', function (e) {
+        const dropdown = document.getElementById('profile-dropdown');
+        const btn = document.getElementById('profile-menu-btn');
+        if (dropdown && !dropdown.classList.contains('hidden') && !dropdown.contains(e.target) && !btn.contains(e.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+</script>
+</body></html>
